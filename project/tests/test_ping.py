@@ -1,5 +1,7 @@
-from app import main
 import os
+
+from app import main
+
 
 def test_ping(test_app):
     response = test_app.get("/ping")
@@ -8,5 +10,5 @@ def test_ping(test_app):
         "environment": "dev",
         "ping": "pong",
         "testing": True,
-        "database": os.environ['DATABASE_TEST_URL'],
+        "database": os.environ["DATABASE_TEST_URL"],
     }
