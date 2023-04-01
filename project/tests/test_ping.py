@@ -1,5 +1,5 @@
 from app import main
-
+import os
 
 def test_ping(test_app):
     response = test_app.get("/ping")
@@ -8,5 +8,5 @@ def test_ping(test_app):
         "environment": "dev",
         "ping": "pong!",
         "testing": True,
-        "database": "postgres://postgres:postgres@web-db:5432/web_test",
+        "database": os.environ['DATABASE_TEST_URL'],
     }
