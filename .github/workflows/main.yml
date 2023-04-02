@@ -22,7 +22,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Pull image
         run: |
-          echo ${{ secrets.GITHUB_TOKEN }}
           docker pull ${{ env.IMAGE }}:latest || true
       - name: Build image
         run: |
